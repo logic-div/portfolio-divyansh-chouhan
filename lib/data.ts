@@ -193,7 +193,7 @@ export const experience: TimelineItem[] = [
   {
     title: 'Machine Learning Intern',
     org: 'Tech Company',
-    period: '2024 — Present',
+    period: '2025 — Present',
     description:
       'Built and deployed ML models for production, improving prediction accuracy by 18% and automating data pipelines used across teams.',
     tags: ['Python', 'PyTorch', 'AWS'],
@@ -201,7 +201,7 @@ export const experience: TimelineItem[] = [
   {
     title: 'Undergraduate Research Assistant',
     org: 'University AI Lab',
-    period: '2023 — 2024',
+    period: '2024 — 2025',
     description:
       'Conducted research on deep learning for computer vision, co-authoring a paper and presenting results at a college symposium.',
     tags: ['Research', 'Deep Learning', 'CV'],
@@ -209,7 +209,7 @@ export const experience: TimelineItem[] = [
   {
     title: 'Hackathon Winner',
     org: 'National AI Hackathon',
-    period: '2023',
+    period: '2025',
     description:
       'Led a team of four to build an AI-powered accessibility tool, winning first place among 200+ teams.',
     tags: ['Teamwork', 'Prototyping'],
@@ -217,7 +217,7 @@ export const experience: TimelineItem[] = [
   {
     title: 'Technical Lead — Coding Club',
     org: 'College',
-    period: '2022 — 2023',
+    period: '2024 — 2025',
     description:
       'Organized workshops on ML and web development, mentoring 50+ students and leading collaborative open-source projects.',
     tags: ['Leadership', 'Mentorship'],
@@ -258,7 +258,7 @@ export const certifications: Certification[] = [
   {
     title: 'Machine Learning',
     issuer: 'Stanford Online',
-    date: '2023',
+    date: '2025',
     url: 'https://example.com',
   },
   {
@@ -276,13 +276,13 @@ export const certifications: Certification[] = [
   {
     title: 'Data Science Professional',
     issuer: 'IBM',
-    date: '2023',
+    date: '2025',
     url: 'https://example.com',
   },
   {
     title: 'Applied Data Science with Python',
     issuer: 'University of Michigan',
-    date: '2023',
+    date: '2025',
     url: 'https://example.com',
   },
 ]
