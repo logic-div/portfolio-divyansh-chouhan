@@ -10,21 +10,20 @@ export function SectionHeading({
   description?: string
 }) {
   return (
-    <div className="mx-auto mb-12 max-w-2xl text-center">
+    <div className="mb-16 border-b border-border/20 pb-6">
       <Reveal>
-        <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/40 px-3 py-1 font-mono text-xs uppercase tracking-widest text-primary">
-          <span className="size-1.5 rounded-full bg-primary" />
+        <span className="font-heading text-xs font-bold uppercase tracking-widest text-muted-foreground">
           {eyebrow}
         </span>
       </Reveal>
       <Reveal delay={0.05}>
-        <h2 className="mt-4 text-balance font-heading text-3xl font-bold tracking-tight sm:text-4xl">
+        <h2 className="mt-2 font-heading text-3xl font-black uppercase tracking-[-0.04em] text-foreground sm:text-4xl md:text-5xl">
           {title}
         </h2>
       </Reveal>
       {description && (
         <Reveal delay={0.1}>
-          <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
+          <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
             {description}
           </p>
         </Reveal>

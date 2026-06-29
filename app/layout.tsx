@@ -42,13 +42,13 @@ export const metadata: Metadata = {
     title: `${profile.name} — ${profile.role}`,
     description: profile.tagline,
     siteName: `${profile.name} Portfolio`,
-    images: [{ url: '/profile.png', width: 1200, height: 630, alt: profile.name }],
+    images: [{ url: '/profile-cropped.png', width: 1200, height: 630, alt: profile.name }],
   },
   twitter: {
     card: 'summary_large_image',
     title: `${profile.name} — ${profile.role}`,
     description: profile.tagline,
-    images: ['/profile.png'],
+    images: ['/profile-cropped.png'],
   },
   generator: 'v0.app',
 }

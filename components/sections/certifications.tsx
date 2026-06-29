@@ -20,9 +20,9 @@ export function Certifications() {
                 href={cert.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="glass group flex h-full items-start gap-4 rounded-2xl p-5 transition-all hover:-translate-y-1 hover:border-primary/40"
+                className="group flex h-full items-start gap-4 rounded-xl border border-border/40 bg-card p-5 transition-all hover:-translate-y-0.5 hover:border-foreground/30"
               >
-                <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-secondary text-foreground transition-colors group-hover:bg-foreground group-hover:text-background">
                   <Award className="size-5" />
                 </span>
                 <div className="min-w-0 flex-1">
@@ -30,10 +30,10 @@ export function Certifications() {
                     <h3 className="font-heading text-sm font-semibold leading-snug">
                       {cert.title}
                     </h3>
-                    <ExternalLink className="size-4 shrink-0 text-muted-foreground transition-colors group-hover:text-primary" />
+                    <ExternalLink className="size-4 shrink-0 text-muted-foreground transition-colors group-hover:text-foreground" />
                   </div>
                   <p className="mt-1 text-sm text-muted-foreground">{cert.issuer}</p>
-                  <p className="mt-0.5 font-mono text-xs text-primary">{cert.date}</p>
+                  <p className="mt-1.5 font-mono text-[10px] font-bold text-muted-foreground uppercase">{cert.date}</p>
                 </div>
               </a>
             </StaggerItem>

@@ -36,73 +36,63 @@ export function Projects() {
 function ProjectCard({ project }: { project: Project }) {
   return (
     <motion.article
-      whileHover={{ y: -6 }}
-      transition={{ type: 'spring', stiffness: 300, damping: 24 }}
-      className={`glass group flex h-full flex-col overflow-hidden rounded-2xl transition-colors hover:border-primary/40 ${
-        project.featured ? 'md:flex-row' : ''
-      }`}
+      whileHover={{ y: -4 }}
+      transition={{ duration: 0.3, ease: 'easeOut' }}
+      className="group flex flex-col overflow-hidden"
     >
-      <div
-        className={`relative overflow-hidden ${
-          project.featured ? 'md:w-1/2' : 'aspect-video'
-        }`}
-      >
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-border/40 bg-muted shadow-sm">
         <Image
           src={project.image}
           alt={`${project.title} preview`}
-          width={800}
-          height={450}
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
           loading="lazy"
-          className={`size-full object-cover transition-transform duration-500 group-hover:scale-105 ${
-            project.featured ? 'aspect-video md:aspect-auto md:h-full' : ''
-          }`}
+          className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent" />
         {project.featured && (
-          <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
-            <Star className="size-3.5 fill-current" />
+          <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-foreground px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-background">
             Featured
           </span>
         )}
       </div>
 
-      <div className="flex flex-1 flex-col p-6">
-        <h3 className="font-heading text-lg font-semibold transition-colors group-hover:text-primary">
+      <div className="flex flex-col pt-4">
+        <h3 className="font-heading text-base font-bold uppercase tracking-tight text-foreground transition-colors group-hover:text-muted-foreground">
           {project.title}
         </h3>
-        <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
+        
+        <p className="mt-2 text-xs leading-relaxed text-muted-foreground line-clamp-3">
           {project.description}
         </p>
 
-        <div className="mt-4 flex flex-wrap gap-1.5">
+        <div className="mt-3 flex flex-wrap gap-1.5">
           {project.tech.map((t) => (
             <span
               key={t}
-              className="rounded-md border border-border bg-card/50 px-2 py-0.5 font-mono text-xs text-muted-foreground"
+              className="rounded bg-secondary px-1.5 py-0.5 font-mono text-[9px] font-semibold text-muted-foreground"
             >
               {t}
             </span>
           ))}
         </div>
 
-        <div className="mt-5 flex items-center gap-3">
+        <div className="mt-4 flex items-center gap-4">
           <a
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-full border border-border px-3.5 py-2 text-xs font-medium transition-colors hover:border-primary/50 hover:text-primary"
+            className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors"
           >
-            <GithubIcon className="size-4" />
+            <GithubIcon className="size-3.5" />
             Code
           </a>
           <a
             href={project.demo}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3.5 py-2 text-xs font-semibold text-primary-foreground transition-transform hover:scale-[1.04]"
+            className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors"
           >
-            Live Demo
-            <ArrowUpRight className="size-4" />
+            Live Demo &rarr;
           </a>
         </div>
       </div>

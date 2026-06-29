@@ -21,16 +21,16 @@ export function About() {
                 {p}
               </p>
             ))}
-            <div className="glass rounded-xl border-l-2 border-l-primary p-5">
-              <p className="font-heading text-sm font-semibold text-primary">Career Goal</p>
-              <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+            <div className="rounded-xl border border-border/40 bg-card p-5">
+              <p className="font-heading text-xs font-bold uppercase tracking-wider text-foreground">Career Goal</p>
+              <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
                 {about.goals}
               </p>
             </div>
           </Reveal>
-
+ 
           <Reveal delay={0.1}>
-            <p className="mb-4 font-heading text-sm font-semibold uppercase tracking-widest text-muted-foreground">
+            <p className="mb-4 font-heading text-xs font-bold uppercase tracking-widest text-muted-foreground">
               What I focus on
             </p>
             <div className="grid grid-cols-2 gap-3">
@@ -39,12 +39,12 @@ export function About() {
                 return (
                   <div
                     key={interest}
-                    className="glass group flex flex-col gap-3 rounded-xl p-4 transition-all hover:-translate-y-1 hover:border-primary/40"
+                    className="group flex flex-col gap-3 rounded-xl border border-border/40 bg-card p-4 transition-all hover:-translate-y-0.5 hover:border-foreground/30"
                   >
-                    <span className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                    <span className="flex size-10 items-center justify-center rounded-lg bg-secondary text-foreground transition-colors group-hover:bg-foreground group-hover:text-background">
                       <Icon className="size-5" />
                     </span>
-                    <span className="text-sm font-medium">{interest}</span>
+                    <span className="text-sm font-semibold">{interest}</span>
                   </div>
                 )
               })}

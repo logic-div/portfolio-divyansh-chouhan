@@ -51,15 +51,15 @@ export function Contact() {
           <Reveal className="space-y-3">
             {details.map((d) => {
               const content = (
-                <div className="glass flex items-center gap-4 rounded-xl p-4 transition-colors hover:border-primary/40">
-                  <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <div className="flex items-center gap-4 rounded-xl border border-border/40 bg-card p-4 transition-colors hover:border-foreground/20">
+                  <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-secondary text-foreground">
                     <d.icon className="size-5" />
                   </span>
                   <div className="min-w-0">
-                    <p className="text-xs uppercase tracking-wide text-muted-foreground">
+                    <p className="text-[10px] uppercase tracking-wider font-bold text-muted-foreground">
                       {d.label}
                     </p>
-                    <p className="truncate text-sm font-medium">{d.value}</p>
+                    <p className="truncate text-sm font-semibold mt-0.5">{d.value}</p>
                   </div>
                 </div>
               )
@@ -81,7 +81,7 @@ export function Contact() {
 
           {/* Form */}
           <Reveal delay={0.1}>
-            <form onSubmit={handleSubmit} className="glass space-y-4 rounded-2xl p-6">
+            <form onSubmit={handleSubmit} className="space-y-4 rounded-2xl border border-border/40 bg-card p-6">
               <div className="grid gap-4 sm:grid-cols-2">
                 <Field label="Name" name="name" placeholder="Jane Doe" />
                 <Field
@@ -95,7 +95,7 @@ export function Contact() {
               <div>
                 <label
                   htmlFor="message"
-                  className="mb-1.5 block text-sm font-medium text-muted-foreground"
+                  className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-muted-foreground"
                 >
                   Message
                 </label>
@@ -105,13 +105,13 @@ export function Contact() {
                   required
                   rows={5}
                   placeholder="Tell me about your idea..."
-                  className="w-full resize-none rounded-xl border border-border bg-background/50 px-4 py-2.5 text-sm outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-primary/60 focus:ring-2 focus:ring-primary/20"
+                  className="w-full resize-none rounded-xl border border-border bg-background px-4 py-2.5 text-sm outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-foreground/50 focus:ring-1 focus:ring-foreground/20"
                 />
               </div>
               <motion.button
                 type="submit"
                 whileTap={{ scale: 0.97 }}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors disabled:opacity-70"
+                className="inline-flex w-full items-center justify-center gap-2 bg-foreground text-background font-bold text-xs uppercase tracking-wider px-6 py-3.5 hover:opacity-90 transition-opacity disabled:opacity-70"
                 disabled={sent}
               >
                 {sent ? (
@@ -147,7 +147,7 @@ function Field({
     <div>
       <label
         htmlFor={name}
-        className="mb-1.5 block text-sm font-medium text-muted-foreground"
+        className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-muted-foreground"
       >
         {label}
       </label>
@@ -157,7 +157,7 @@ function Field({
         type={type}
         required
         placeholder={placeholder}
-        className="w-full rounded-xl border border-border bg-background/50 px-4 py-2.5 text-sm outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-primary/60 focus:ring-2 focus:ring-primary/20"
+        className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-foreground/50 focus:ring-1 focus:ring-foreground/20"
       />
     </div>
   )

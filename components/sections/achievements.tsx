@@ -8,7 +8,7 @@ export function Achievements() {
   return (
     <section className="px-4 py-16 sm:px-6">
       <div className="mx-auto max-w-6xl">
-        <div className="glass grid grid-cols-2 gap-px overflow-hidden rounded-3xl lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-px overflow-hidden border border-border/40 bg-border/40 rounded-2xl lg:grid-cols-4">
           {achievements.map((item, i) => (
             <motion.div
               key={item.label}
@@ -16,14 +16,14 @@ export function Achievements() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="flex flex-col items-center justify-center gap-1 p-8 text-center"
+              className="flex flex-col items-center justify-center gap-1 p-8 text-center bg-card"
             >
               <Counter
                 value={item.value}
                 suffix={item.suffix}
                 decimals={'decimals' in item ? (item.decimals as number) : 0}
               />
-              <span className="text-sm text-muted-foreground">{item.label}</span>
+              <span className="text-xs uppercase tracking-wider font-bold text-muted-foreground">{item.label}</span>
             </motion.div>
           ))}
         </div>
@@ -58,7 +58,7 @@ function Counter({
   return (
     <span
       ref={ref}
-      className="font-heading text-4xl font-bold text-gradient-primary sm:text-5xl"
+      className="font-heading text-3xl font-black tracking-tight text-foreground sm:text-4xl"
     >
       {display}
       {suffix}

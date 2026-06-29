@@ -43,12 +43,12 @@ export function Skills() {
             const Icon = icons[group.category] ?? Code2
             return (
               <StaggerItem key={group.category}>
-                <div className="glass group h-full rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5">
+                <div className="group h-full rounded-xl border border-border/40 bg-card p-6 transition-all hover:-translate-y-0.5 hover:border-foreground/30">
                   <div className="mb-5 flex items-center gap-3">
-                    <span className="flex size-10 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                    <span className="flex size-10 items-center justify-center rounded-lg bg-secondary text-foreground transition-colors group-hover:bg-foreground group-hover:text-background">
                       <Icon className="size-5" />
                     </span>
-                    <h3 className="font-heading text-base font-semibold">
+                    <h3 className="font-heading text-sm font-bold uppercase tracking-tight text-foreground">
                       {group.category}
                     </h3>
                   </div>
@@ -56,9 +56,9 @@ export function Skills() {
                   <div className="space-y-3.5">
                     {group.skills.map((skill) => (
                       <div key={skill.name}>
-                        <div className="mb-1 flex items-center justify-between text-sm">
+                        <div className="mb-1 flex items-center justify-between text-xs">
                           <span className="text-muted-foreground">{skill.name}</span>
-                          <span className="font-mono text-xs text-primary">
+                          <span className="font-mono text-[10px] font-bold text-muted-foreground">
                             {skill.level}%
                           </span>
                         </div>

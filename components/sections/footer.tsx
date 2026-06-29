@@ -10,16 +10,16 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 text-center">
         <a
           href="#home"
-          className="font-heading text-lg font-bold tracking-tight text-gradient-primary"
+          className="font-heading text-sm font-bold uppercase tracking-widest text-foreground"
         >
           {profile.name}
         </a>
 
         <nav aria-label="Footer">
-          <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-muted-foreground">
+          <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[10px] uppercase tracking-wider font-bold text-muted-foreground">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a href={link.href} className="transition-colors hover:text-primary">
+                <a href={link.href} className="transition-colors hover:text-foreground">
                   {link.label}
                 </a>
               </li>
@@ -65,7 +65,7 @@ function FooterIcon({
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="text-muted-foreground transition-all hover:-translate-y-0.5 hover:text-primary"
+      className="text-muted-foreground transition-all hover:-translate-y-0.5 hover:text-foreground"
     >
       {children}
     </a>

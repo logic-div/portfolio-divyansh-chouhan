@@ -18,11 +18,11 @@ export const profile = {
   ],
   tagline:
     'Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning. I build intelligent systems that turn data into meaningful, real-world impact.',
-  avatar: '/profile.png',
+  avatar: '/profile-cropped.png',
   resumeUrl: '/resume.pdf', // place your resume PDF in /public
-  location: 'City, Country',
-  email: 'you@example.com',
-  phone: '+1 (000) 000-0000',
+  location: 'Indore, Madhya Pradesh, India',
+  email: 'divyanshc2305@gmail.com',
+  phone: '+91 9691939471',
   socials: {
     github: 'https://github.com/logic-div',
     linkedin: 'https://www.linkedin.com/in/divyansh-singh-chouhan-4a6713367',
@@ -226,9 +226,9 @@ export const experience: TimelineItem[] = [
 
 export const education: TimelineItem[] = [
   {
-    title: 'B.E. Computer Science Engineering (AI & ML)',
+    title: 'B.Tech Computer Science Engineering (AI & ML)',
     org: 'Acropolis Institute of Technology and Research',
-    period: '2022 — 2026',
+    period: '2024 — 2028',
     description:
       'Specialization in Artificial Intelligence and Machine Learning. CGPA: 9.2 / 10. Relevant coursework: Deep Learning, NLP, Data Structures, Statistics.',
   },
