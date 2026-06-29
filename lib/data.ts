@@ -143,16 +143,6 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: 'Neural Vision — Image Recognition',
-    description:
-      'A deep convolutional neural network for real-time image classification, achieving 96% accuracy on a custom dataset with an interactive inference dashboard.',
-    image: '/projects/neural-vision.png',
-    tech: ['PyTorch', 'OpenCV', 'FastAPI', 'React'],
-    github: 'https://github.com/logic-div/neural-vision',
-    demo: 'https://example.com',
-    featured: true,
-  },
-  {
     title: 'NLP Assistant — Conversational AI',
     description:
       'A transformer-based conversational assistant with retrieval-augmented generation, semantic search and a streaming chat interface.',
@@ -160,6 +150,7 @@ export const projects: Project[] = [
     tech: ['Transformers', 'LangChain', 'Next.js', 'Pinecone'],
     github: 'https://github.com/logic-div/nlp-assistant',
     demo: 'https://example.com',
+    featured: true,
   },
   {
     title: 'Insight — Data Science Platform',

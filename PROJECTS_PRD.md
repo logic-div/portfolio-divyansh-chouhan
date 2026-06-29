@@ -1,37 +1,10 @@
 # Projects Technical Specification & PRD (Product Requirement Document)
 
-This document provides a detailed technical breakdown, architectural overview, and technology stack description for the four featured projects integrated into the AI/ML Engineering Portfolio.
+This document provides a detailed technical breakdown, architectural overview, and technology stack description for the three featured projects integrated into the AI/ML Engineering Portfolio.
 
 ---
 
-## 1. Neural Vision — Image Recognition
-
-### Overview
-A production-grade, real-time image recognition system designed to classify images with high accuracy. It features a deep Convolutional Neural Network (CNN) backend and an interactive web inference dashboard that allows users to upload images and visualize classification confidence scores in real-time.
-
-### Key Objectives
-*   Deliver low-latency inference (<100ms) for real-time applications.
-*   Achieve high accuracy (96%+) on the target image dataset.
-*   Provide clear visual insights (bounding boxes, heatmaps, confidence charts) to the frontend user.
-
-### Architecture & Data Flow
-```
-[User Interface (React)] ────(Image Upload)────> [FastAPI Backend]
-       ▲                                                 │
-       │                                            (CV Preprocess)
-       │                                                 ▼
-[Confidence Charts & Visuals] <───(Inference)─── [PyTorch model (CNN)]
-```
-
-### Technology Stack & Justification
-*   **PyTorch**: Used for building, training, and optimizing the Deep Convolutional Neural Network (CNN). PyTorch was selected for its dynamic computation graph and extensive support for computer vision transfer learning (ResNet/EfficientNet backbones).
-*   **OpenCV**: Handles image pre-processing tasks (resizing, normalization, color space conversions, and image augmentation) before sending inputs to the model.
-*   **FastAPI**: A high-performance Python web framework used to expose the model inference endpoint. It leverages asynchronous capabilities to handle multiple upload requests concurrently with minimal overhead.
-*   **React**: Powers the interactive web dashboard, rendering confidence bar graphs and upload states smoothly.
-
----
-
-## 2. NLP Assistant — Conversational AI
+## 1. NLP Assistant — Conversational AI
 
 ### Overview
 A Retrieval-Augmented Generation (RAG) conversational agent capable of answering complex domain-specific questions by reference-searching an external knowledge base. It avoids generative hallucinations by supplying relevant document context to a Large Language Model (LLM) during prompt execution.
@@ -58,7 +31,7 @@ A Retrieval-Augmented Generation (RAG) conversational agent capable of answering
 
 ---
 
-## 3. Insight — Data Science Platform
+## 2. Insight — Data Science Platform
 
 ### Overview
 An automated data analysis platform designed to take raw CSV/database uploads, perform automated cleaning (handling missing values, identifying outliers), and generate interactive analytics dashboards along with automated forecasting predictions.
@@ -85,7 +58,7 @@ An automated data analysis platform designed to take raw CSV/database uploads, p
 
 ---
 
-## 4. MLOps Pipeline — Model Deployment
+## 3. MLOps Pipeline — Model Deployment
 
 ### Overview
 A production-grade CI/CD and deployment pipeline that automates the model training cycle, tracks experiment metrics, registers champion models, packages them into containers, and deploys them to cloud environments with automated monitoring.
