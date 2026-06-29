@@ -40,7 +40,7 @@ function ProjectCard({ project }: { project: Project }) {
       transition={{ duration: 0.3, ease: 'easeOut' }}
       className="group flex flex-col overflow-hidden"
     >
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-border/40 bg-muted shadow-sm">
+      <div className="relative aspect-[16/7] w-full overflow-hidden rounded-xl border border-border/40 bg-muted shadow-sm">
         <Image
           src={project.image}
           alt={`${project.title} preview`}
