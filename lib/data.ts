@@ -230,7 +230,7 @@ export const education: TimelineItem[] = [
     org: 'Acropolis Institute of Technology and Research',
     period: '2024 — 2028',
     description:
-      'Specialization in Artificial Intelligence and Machine Learning. CGPA: 9.2 / 10. Relevant coursework: Deep Learning, NLP, Data Structures, Statistics.',
+      'Specialization in Artificial Intelligence and Machine Learning. Relevant coursework: Deep Learning, NLP, Data Structures, Statistics.',
   },
   {
     title: 'Higher Secondary (Science)',
@@ -291,7 +291,7 @@ export const achievements = [
   { value: 25, suffix: '+', label: 'Projects Built' },
   { value: 12, suffix: '+', label: 'Certifications' },
   { value: 5, suffix: '', label: 'Hackathons Won' },
-  { value: 9.2, suffix: '', label: 'CGPA', decimals: 1 },
+  { value: 500, suffix: '+', label: 'GitHub Commits' },
 ]
 
 export const navLinks = [
